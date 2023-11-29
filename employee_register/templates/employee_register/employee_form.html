@@ -1,0 +1,17 @@
+{% extends 'employee_register/base.html' %}
+
+
+
+{% block content %}
+  <form action="" method="post" autocomplete="off">
+    {% csrf_token %}
+
+    <div class="container" style="display: flex;flex-direction: column; width: 250px;">
+      {{ form }}
+      <br>
+    </div>
+  <button type="submit" class="btn btn-success myhovereffect">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="{% url 'employee_list' %}" style="text-decoration: none;" class="btn btn-primary myhovereffect2">Back to list</a>
+  </form>
+{% endblock content %}
+
